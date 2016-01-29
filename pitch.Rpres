@@ -1,0 +1,38 @@
+Child Naming Trends in USA
+========================================================
+author: Hennie Grobler
+date: 2015-01-21
+
+Overview
+========================================================
+Explore childrens names by:
+- Gender
+- Year
+- State
+
+Dataset consist of:
+- Approx. 3.5 million records
+- 27,863 unique child names
+- 32 states in USA
+- Yearly data between 1910 and 2014
+
+More info at: https://www.ssa.gov/oact/babynames/limits.html
+
+Most Common Names
+========================================================
+Most Commin Names Accross USA or specific state per year
+```{r, echo=FALSE}
+library(knitr)
+tp <- read.csv('presentation_top.csv')
+tp$X <- NULL
+colnames(tp) <- c('Name', 'NumberOfChildren', 'Percentage Of Total') 
+knitr::kable(head(tp))
+```
+
+
+Common Name Over Time
+========================================================
+How does usage of a particular name change over time
+```{r, echo=FALSE}
+plot(cars)
+```
